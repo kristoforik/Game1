@@ -1,7 +1,7 @@
 from asyncio.windows_events import NULL
 import random, sys, time, Game, Role1, Role2
 role1 = Role1.Description()
-challenge1 = Game.Challenge1()
+challenge1_1 = Game.Challenge1_1()
 print("Welcome to the game")
 print(" ")
 pick = int(input("Choose one role: "))
@@ -11,7 +11,7 @@ if pick == 1:
     print("\n Are you ready to proceed to the operation?\n Type [1] if Yes or [2] if No")
     proceed = int(input())
     if proceed == 1 :
-        challenge1.introduction()
+        challenge1_1.introduction()
         attempt = int(input())
         if attempt == 1:
             print("nice")
