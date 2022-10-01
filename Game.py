@@ -29,4 +29,3 @@ class Challenge3_1:
         print("YOU WON! Terrorists are dead and hostage is saved. Mission is done successfully and you improved your defusing abilities by 1.")
     def full_fail(self):
         print("YOU LOST! You didn't even manage to crack the door, so the building blew up")
-    

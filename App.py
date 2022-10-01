@@ -2,6 +2,8 @@ from asyncio.windows_events import NULL
 import random, sys, time, Game, Role1, Role2
 role1 = Role1.Description()
 challenge1_1 = Game.Challenge1_1()
+challenge2_1 = Game.Challenge2_1()
+challenge3_1 = Game.Challenge3_1()
 print("Welcome to the game")
 print(" ")
 pick = int(input("Choose one role: "))
@@ -12,13 +14,37 @@ if pick == 1:
     proceed = int(input())
     if proceed == 1 :
         challenge1_1.introduction()
-        attempt = int(input())
-        if attempt == 1:
-            print("nice")
-        elif attempt == 2:
-            print("bad")
+        dice_roll = int(input())
+        if dice_roll == 1:
+            challenge1_1.success()
+            print("Now, moving to the next part of the operation")
+            challenge2_1.introduction()
+            dice_roll = int(input())
+            if dice_roll == 1:
+                challenge2_1.success()
+                print("Proceeding to the last task...")
+                challenge3_1.inroduction()
+                dice_roll = int(input())
+                if dice_roll == 1:
+                    challenge3_1.succes()
+                elif dice_roll == 2:
+                    challenge3_1.full_success()
+                elif dice_roll == 3:
+                    challenge3_1.fail()
+                elif dice_roll == 4:
+                    challenge3_1.full_fail()
+            elif dice_roll == 2:
+                challenge2_1.full_success()
+            elif dice_roll == 3:
+                challenge2_1.fail()
+            elif dice_roll == 4:
+                challenge2_1.full_fail()
+            else:
+                print("Error") 
+        elif dice_roll == 2:
+            challenge1_1.full_success()
         else:
-            print("Error")
+            challenge1_1.fail()
     elif proceed == 2:
         quit()
     else:
