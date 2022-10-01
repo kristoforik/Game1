@@ -1,6 +1,12 @@
 #from asyncio.windows_events import NULL
 import random, sys, time, Game, Role1, Role2
+def print_slowly(text):
+    for i in text:
+        sys.stdout.write(i)
+        sys.stdout.flush()
+        time.sleep(0.09)
 role1 = Role1.Description()
+role2 = Role2.Description()
 challenge1_1 = Game.Challenge1_1()
 challenge2_1 = Game.Challenge2_1()
 challenge3_1 = Game.Challenge3_1()
@@ -85,7 +91,7 @@ if pick == 1:
                 print("Error") 
         elif dice_roll == 2:
             challenge1_1.full_success()
-            print("Now, moving to the next part of the operation")
+            print("Now, moving to the next part of the operation\n")
             challenge2_1.introduction()
             dice_roll = int(input())
             if dice_roll == 1:

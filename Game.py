@@ -1,3 +1,9 @@
+import sys, time
+def print_slowly(text):
+    for i in text:
+        sys.stdout.write(i)
+        sys.stdout.flush()
+        time.sleep(0.05)
 class Challenge1_1:
     def introduction(self):
         print("The operation has started...\nThe first task is to hack electrical system and cut the power of the building\nRoll the dice to hack the system. Type [1] to roll")
