@@ -1,4 +1,3 @@
-#from asyncio.windows_events import NULL
 import random, sys, time, Game, Role1, Role2
 def print_slowly(text):
     for i in text:

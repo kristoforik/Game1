@@ -1,3 +1,4 @@
+# надо везде print_slowly поставить
 import sys, time
 def print_slowly(text):
     for i in text:
@@ -6,13 +7,13 @@ def print_slowly(text):
         time.sleep(0.05)
 class Challenge1_1:
     def introduction(self):
-        print("The operation has started...\nThe first task is to hack electrical system and cut the power of the building\nRoll the dice to hack the system. Type [1] to roll")
+        print_slowly("The operation has started...\nThe first task is to hack electrical system and cut the power of the building\nRoll the dice to hack the system. Type [1] to roll ")
     def success(self):
-        print("Well done! You hacked electricity and now terrorists don't have light.")
+        print_slowly("Well done! You hacked electricity and now terrorists don't have light.")
     def fail(self):
-        print("You lost! You did not manage to hack electricity and time is out.") 
+        print_slowly("You lost! You did not manage to hack electricity and time is out.") 
     def full_success(self):
-        print("Well done! You hacked electricity and improved your hacking abilities by 1 so that now terrorists don't have light.")
+        print_slowly("Well done! You hacked electricity and improved your hacking abilities by 1 so that now terrorists don't have light.")
 class Challenge2_1:
     def introduction(self):
         print("Get ready your rifle! Your next task is to enter a building and kill all terrorits there...\nRoll the dice to begin an anti-terror sweep. Type [1] to roll")
