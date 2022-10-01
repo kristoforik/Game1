@@ -1,4 +1,4 @@
-from asyncio.windows_events import NULL
+#from asyncio.windows_events import NULL
 import random, sys, time, Game, Role1, Role2
 role1 = Role1.Description()
 challenge1_1 = Game.Challenge1_1()
@@ -35,17 +35,127 @@ if pick == 1:
                     challenge3_1.full_fail()
             elif dice_roll == 2:
                 challenge2_1.full_success()
+                print("Proceeding to the last task...")
+                challenge3_1.inroduction()
+                dice_roll = int(input())
+                if dice_roll == 1:
+                    challenge3_1.succes()
+                elif dice_roll == 2:
+                    challenge3_1.full_success()
+                elif dice_roll == 3:
+                    challenge3_1.fail()
+                elif dice_roll == 4:
+                    challenge3_1.full_fail()
             elif dice_roll == 3:
                 challenge2_1.fail()
+                dice_roll = int(input())
+                if dice_roll == 1:
+                    challenge2_1.success()
+                    print("Proceeding to the last task...")
+                    challenge3_1.inroduction()
+                    dice_roll = int(input())
+                    if dice_roll == 1:
+                        challenge3_1.succes()
+                    elif dice_roll == 2:
+                        challenge3_1.full_success()
+                    elif dice_roll == 3:
+                        challenge3_1.fail()
+                    elif dice_roll == 4:
+                        challenge3_1.full_fail()
+                elif dice_roll == 2:
+                    challenge2_1.full_success()
+                    print("Proceeding to the last task...")
+                    challenge3_1.inroduction()
+                    dice_roll = int(input())
+                    if dice_roll == 1:
+                        challenge3_1.succes()
+                    elif dice_roll == 2:
+                        challenge3_1.full_success()
+                    elif dice_roll == 3:
+                        challenge3_1.fail()
+                    elif dice_roll == 4:
+                        challenge3_1.full_fail()
+                elif dice_roll == 3:
+                    challenge2_1.full_fail()
+                else:
+                    print("You left the game")
             elif dice_roll == 4:
                 challenge2_1.full_fail()
             else:
                 print("Error") 
         elif dice_roll == 2:
             challenge1_1.full_success()
-        else:
+            print("Now, moving to the next part of the operation")
+            challenge2_1.introduction()
+            dice_roll = int(input())
+            if dice_roll == 1:
+                challenge2_1.success()
+                print("Proceeding to the last task...")
+                challenge3_1.inroduction()
+                dice_roll = int(input())
+                if dice_roll == 1:
+                    challenge3_1.succes()
+                elif dice_roll == 2:
+                    challenge3_1.full_success()
+                elif dice_roll == 3:
+                    challenge3_1.fail()
+                elif dice_roll == 4:
+                    challenge3_1.full_fail()
+            elif dice_roll == 2:
+                challenge2_1.full_success()
+                print("Proceeding to the last task...")
+                challenge3_1.inroduction()
+                dice_roll = int(input())
+                if dice_roll == 1:
+                    challenge3_1.succes()
+                elif dice_roll == 2:
+                    challenge3_1.full_success()
+                elif dice_roll == 3:
+                    challenge3_1.fail()
+                elif dice_roll == 4:
+                    challenge3_1.full_fail()
+            elif dice_roll == 3:
+                challenge2_1.fail()
+                dice_roll = int(input())
+                if dice_roll == 1:
+                    challenge2_1.success()
+                    print("Proceeding to the last task...")
+                    challenge3_1.inroduction()
+                    dice_roll = int(input())
+                    if dice_roll == 1:
+                        challenge3_1.succes()
+                    elif dice_roll == 2:
+                        challenge3_1.full_success()
+                    elif dice_roll == 3:
+                        challenge3_1.fail()
+                    elif dice_roll == 4:
+                        challenge3_1.full_fail()
+                elif dice_roll == 2:
+                    challenge2_1.full_success()
+                    print("Proceeding to the last task...")
+                    challenge3_1.inroduction()
+                    dice_roll = int(input())
+                    if dice_roll == 1:
+                        challenge3_1.succes()
+                    elif dice_roll == 2:
+                        challenge3_1.full_success()
+                    elif dice_roll == 3:
+                        challenge3_1.fail()
+                    elif dice_roll == 4:
+                        challenge3_1.full_fail()
+                elif dice_roll == 3:
+                    challenge2_1.full_fail()
+            elif dice_roll == 4:
+                challenge2_1.full_fail()
+            else:
+                print("Error") 
+        elif dice_roll == 3:
             challenge1_1.fail()
+        else:
+            print("You lef the game")
+            quit()
     elif proceed == 2:
+        print("You left the game")
         quit()
     else:
         print("Error")
