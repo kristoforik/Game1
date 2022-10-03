@@ -4,19 +4,25 @@ def print_slowly(text):
         sys.stdout.write(i)
         sys.stdout.flush()
         time.sleep(0.09)
+def print_slowly2(text):
+    for i in text:
+        sys.stdout.write(i)
+        sys.stdout.flush()
+        time.sleep(0.6)
 role1 = Role1.Description()
 role2 = Role2.Description()
 phrases = Game.Phrases()
 challenge1_1 = Game.Challenge1_1()
 challenge2_1 = Game.Challenge2_1()
 challenge3_1 = Game.Challenge3_1()
-print("Welcome to the game")
+print_slowly2("WELCOME TO THE GAME")
+time.sleep(5)
 print(" ")
 pick = int(input("Choose one role: "))
 if pick == 1:
     print("\nYour choice is", Role1.name)
     role1.description()
-    print("\n Are you ready to proceed to the operation?\n Type [1] if Yes or [2] if No")
+    print_slowly("\n Are you ready to proceed to the operation?\n Type [1] if Yes or [2] if No")
     proceed = int(input())
     if proceed == 1 :
         challenge1_1.introduction()
@@ -27,21 +33,21 @@ if pick == 1:
             print(attempt)
             if attempt == 1:
                 challenge1_1.success()
-                print("Now, moving to the next part of the operation")
+                phrases.next()
                 challenge2_1.introduction()
                 roll = int(input())
                 if roll == 1:
                     attempt = random.randint(1,4)
-                    print_slowly("Your dice number is: ")
+                    phrases.number()
                     print(attempt)
                     if attempt == 1:
                         challenge2_1.success()
-                        print("Proceeding to the last task...")
+                        phrases.proceeding()
                         challenge3_1.inroduction()
                         roll = int(input())
                         if roll == 1:
                             attempt = random.randint(1,4)
-                            print_slowly("Your dice number is: ")
+                            phrases.number()
                             print(attempt)
                             if attempt == 1:
                                 challenge3_1.succes()
@@ -52,15 +58,15 @@ if pick == 1:
                             else:
                                 challenge3_1.full_fail()
                         else:
-                            print("You left the game")
+                            phrases.leaving()
                     elif attempt == 2:
                         challenge2_1.full_success()
-                        print("Proceeding to the last task...")
+                        phrases.proceeding()
                         challenge3_1.inroduction()
                         roll = int(input())
                         if roll == 1:
                             attempt = random.randint(1,4)
-                            print_slowly("Your dice number is: ")
+                            phrases.number()
                             print(attempt)
                             if attempt == 1:
                                 challenge3_1.succes()
@@ -71,22 +77,22 @@ if pick == 1:
                             elif attempt == 4:
                                 challenge3_1.full_fail()
                         else:
-                            print("You left the game")
+                            phrases.leaving()
                     elif attempt == 3:
                         challenge2_1.fail()
                         roll = int(input())
                         if roll == 1:
                             attempt = random.randint(1,4)
-                            print_slowly("Your dice number is: ")
+                            phrases.number()
                             print(attempt)    
                             if attempt == 1:
                                 challenge2_1.success()
-                                print("Proceeding to the last task...")
+                                phrases.proceeding()
                                 challenge3_1.inroduction()
                                 roll = int(input())
                                 if roll == 1:
                                     attempt = random.randint(1,4)
-                                    print_slowly("Your dice number is: ")
+                                    phrases.number()
                                     print(attempt)
                                     if attempt == 1:
                                         challenge3_1.succes()
@@ -98,12 +104,12 @@ if pick == 1:
                                         challenge3_1.full_fail()
                             elif attempt == 2:
                                 challenge2_1.full_success()
-                                print("Proceeding to the last task...")
+                                phrases.proceeding()
                                 challenge3_1.inroduction()
                                 roll = int(input())
                                 if roll == 1:
                                     attempt = random.randint(1,4)
-                                    print_slowly("Your dice number is: ")
+                                    phrases.number()
                                     print(attempt)
                                     if attempt == 1:
                                         challenge3_1.succes()
@@ -125,21 +131,21 @@ if pick == 1:
                     phrases.leaving()
             elif attempt == 2:
                 challenge1_1.full_success()
-                print("Now, moving to the next part of the operation\n")
+                phrases.next()
                 challenge2_1.introduction()
                 roll = int(input())
                 if roll == 1:
                     attempt = random.randint(1,4)
-                    print_slowly("Your dice number is: ")
+                    phrases.number()
                     print(attempt)
                     if attempt == 1:
                         challenge2_1.success()
-                        print("Proceeding to the last task...")
+                        phrases.proceeding()
                         challenge3_1.inroduction()
                         roll = int(input())
                         if roll == 1:
                             attempt = random.randint(1,4)
-                            print_slowly("Your dice number is: ")
+                            phrases.number()
                             print(attempt)
                             if attempt == 1:
                                 challenge3_1.succes()
@@ -153,12 +159,12 @@ if pick == 1:
                             phrases.leaving()
                     elif attempt == 2:
                         challenge2_1.full_success()
-                        print("Proceeding to the last task...")
+                        phrases.proceeding()
                         challenge3_1.inroduction()
                         roll = int(input())
                         if roll == 1:
                             attempt = random.randint(1,4)
-                            print_slowly("Your dice number is: ")
+                            phrases.number()
                             print(attempt)
                             if attempt == 1:
                                 challenge3_1.succes()
@@ -175,11 +181,11 @@ if pick == 1:
                         roll = int(input())
                         if roll == 1:
                             attempt = random.randint(1,4)
-                            print_slowly("Your dice number is: ")
+                            phrases.number()
                             print(attempt)
                             if attempt == 1:
                                 challenge2_1.success()
-                                print("Proceeding to the last task...")
+                                phrases.proceeding()
                                 challenge3_1.inroduction()
                                 roll = int(input())
                                 if roll == 1:
@@ -195,12 +201,12 @@ if pick == 1:
                                     phrases.leaving()
                             elif attempt == 2:
                                 challenge2_1.full_success()
-                                print("Proceeding to the last task...")
+                                phrases.proceeding()
                                 challenge3_1.inroduction()
                                 roll = int(input())
                                 if roll == 1:
                                     attempt = random.randint(1,4)
-                                    print_slowly("Your dice number is: ")
+                                    phrases.number()
                                     print(attempt)
                                     if attempt == 1:
                                         challenge3_1.succes()
@@ -219,7 +225,7 @@ if pick == 1:
                     else:
                         print("Error") 
                 else:
-                    print("You left the game")
+                    phrases.leaving()
             elif attempt == 3:
                 challenge1_1.fail()
             else:

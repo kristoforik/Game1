@@ -78,3 +78,7 @@ class Phrases:
     def number(self):
         print_slowly("Your dice number is: ")
         print_slowly2("... .. . ")
+    def proceeding(self):
+        print_slowly("Proceeding to the last task...\n")
+    def next(self):
+        print_slowly("Now, moving to the next part of the operation\n")
