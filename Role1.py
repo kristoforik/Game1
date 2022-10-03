@@ -14,6 +14,6 @@ class Description:
         print_slowly("Operator's description:\n")
         print_slowly("   Name: John\n")
         print_slowly("   Age: 39\n")
-        print_slowly("   Shooting accuracy: 2\n")
         print_slowly("   Hacking: 1\n")
+        print_slowly("   Shooting accuracy: 2\n")
         print_slowly("   Cracking: 1")

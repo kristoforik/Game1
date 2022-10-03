@@ -1,4 +1,4 @@
-import sys, time, random
+import sys, time
 def print_slowly(text):
     for i in text:
         sys.stdout.write(i)
@@ -14,6 +14,6 @@ class Description:
         print_slowly("Operator's description:\n")
         print_slowly("   Name: Roger\n")
         print_slowly("   Age: 43\n")
-        print_slowly("   Shooting accuracy: 1\n")
         print_slowly("   Hacking: 2\n")
+        print_slowly("   Shooting accuracy: 1\n")
         print_slowly("   Cracking: 1")
