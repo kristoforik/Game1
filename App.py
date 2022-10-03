@@ -6,6 +6,7 @@ def print_slowly(text):
         time.sleep(0.09)
 role1 = Role1.Description()
 role2 = Role2.Description()
+phrases = Game.Phrases()
 challenge1_1 = Game.Challenge1_1()
 challenge2_1 = Game.Challenge2_1()
 challenge3_1 = Game.Challenge3_1()
@@ -22,7 +23,7 @@ if pick == 1:
         roll = int(input())
         if roll == 1:
             attempt = random.randint(1,4)
-            print_slowly("Your dice number is: ")
+            phrases.number()
             print(attempt)
             if attempt == 1:
                 challenge1_1.success()
@@ -73,118 +74,162 @@ if pick == 1:
                             print("You left the game")
                     elif attempt == 3:
                         challenge2_1.fail()
-                        dice_roll = int(input())
-                        if dice_roll == 1:
-                            challenge2_1.success()
-                            print("Proceeding to the last task...")
-                            challenge3_1.inroduction()
-                            dice_roll = int(input())
-                            if dice_roll == 1:
-                                challenge3_1.succes()
-                            elif dice_roll == 2:
-                                challenge3_1.full_success()
-                            elif dice_roll == 3:
-                                challenge3_1.fail()
-                            elif dice_roll == 4:
-                                challenge3_1.full_fail()
-                        elif dice_roll == 2:
-                            challenge2_1.full_success()
-                            print("Proceeding to the last task...")
-                            challenge3_1.inroduction()
-                            dice_roll = int(input())
-                            if dice_roll == 1:
-                                challenge3_1.succes()
-                            elif dice_roll == 2:
-                                challenge3_1.full_success()
-                            elif dice_roll == 3:
-                                challenge3_1.fail()
-                            elif dice_roll == 4:
-                                challenge3_1.full_fail()
-                        elif dice_roll == 3:
-                            challenge2_1.full_fail()
-                        else:
-                            print("You left the game")
+                        roll = int(input())
+                        if roll == 1:
+                            attempt = random.randint(1,4)
+                            print_slowly("Your dice number is: ")
+                            print(attempt)    
+                            if attempt == 1:
+                                challenge2_1.success()
+                                print("Proceeding to the last task...")
+                                challenge3_1.inroduction()
+                                roll = int(input())
+                                if roll == 1:
+                                    attempt = random.randint(1,4)
+                                    print_slowly("Your dice number is: ")
+                                    print(attempt)
+                                    if attempt == 1:
+                                        challenge3_1.succes()
+                                    elif attempt == 2:
+                                        challenge3_1.full_success()
+                                    elif attempt == 3:
+                                        challenge3_1.fail()
+                                    elif attempt == 4:
+                                        challenge3_1.full_fail()
+                            elif attempt == 2:
+                                challenge2_1.full_success()
+                                print("Proceeding to the last task...")
+                                challenge3_1.inroduction()
+                                roll = int(input())
+                                if roll == 1:
+                                    attempt = random.randint(1,4)
+                                    print_slowly("Your dice number is: ")
+                                    print(attempt)
+                                    if attempt == 1:
+                                        challenge3_1.succes()
+                                    elif attempt == 2:
+                                        challenge3_1.full_success()
+                                    elif attempt == 3:
+                                        challenge3_1.fail()
+                                    elif attempt == 4:
+                                        challenge3_1.full_fail()
+                            elif attempt == 3 or attempt == 4:
+                                challenge2_1.full_fail()
+                            else:
+                                phrases.leaving()
                     elif attempt == 4:
                         challenge2_1.full_fail()
                     else:
                         print("Error")
                 else:
-                    print("You left the game") 
+                    phrases.leaving()
             elif attempt == 2:
                 challenge1_1.full_success()
                 print("Now, moving to the next part of the operation\n")
                 challenge2_1.introduction()
-                dice_roll = int(input())
-                if dice_roll == 1:
-                    challenge2_1.success()
-                    print("Proceeding to the last task...")
-                    challenge3_1.inroduction()
-                    dice_roll = int(input())
-                    if dice_roll == 1:
-                        challenge3_1.succes()
-                    elif dice_roll == 2:
-                        challenge3_1.full_success()
-                    elif dice_roll == 3:
-                        challenge3_1.fail()
-                    elif dice_roll == 4:
-                        challenge3_1.full_fail()
-                elif dice_roll == 2:
-                    challenge2_1.full_success()
-                    print("Proceeding to the last task...")
-                    challenge3_1.inroduction()
-                    dice_roll = int(input())
-                    if dice_roll == 1:
-                        challenge3_1.succes()
-                    elif dice_roll == 2:
-                        challenge3_1.full_success()
-                    elif dice_roll == 3:
-                        challenge3_1.fail()
-                    elif dice_roll == 4:
-                        challenge3_1.full_fail()
-                elif dice_roll == 3:
-                    challenge2_1.fail()
-                    dice_roll = int(input())
-                    if dice_roll == 1:
+                roll = int(input())
+                if roll == 1:
+                    attempt = random.randint(1,4)
+                    print_slowly("Your dice number is: ")
+                    print(attempt)
+                    if attempt == 1:
                         challenge2_1.success()
                         print("Proceeding to the last task...")
                         challenge3_1.inroduction()
-                        dice_roll = int(input())
-                        if dice_roll == 1:
-                            challenge3_1.succes()
-                        elif dice_roll == 2:
-                            challenge3_1.full_success()
-                        elif dice_roll == 3:
-                            challenge3_1.fail()
-                        elif dice_roll == 4:
-                            challenge3_1.full_fail()
-                    elif dice_roll == 2:
+                        roll = int(input())
+                        if roll == 1:
+                            attempt = random.randint(1,4)
+                            print_slowly("Your dice number is: ")
+                            print(attempt)
+                            if attempt == 1:
+                                challenge3_1.succes()
+                            elif attempt == 2:
+                                challenge3_1.full_success()
+                            elif attempt == 3:
+                                challenge3_1.fail()
+                            elif attempt == 4:
+                                challenge3_1.full_fail()
+                        else: 
+                            phrases.leaving()
+                    elif attempt == 2:
                         challenge2_1.full_success()
                         print("Proceeding to the last task...")
                         challenge3_1.inroduction()
-                        dice_roll = int(input())
-                        if dice_roll == 1:
-                            challenge3_1.succes()
-                        elif dice_roll == 2:
-                            challenge3_1.full_success()
-                        elif dice_roll == 3:
-                            challenge3_1.fail()
-                        elif dice_roll == 4:
-                            challenge3_1.full_fail()
-                    elif dice_roll == 3:
+                        roll = int(input())
+                        if roll == 1:
+                            attempt = random.randint(1,4)
+                            print_slowly("Your dice number is: ")
+                            print(attempt)
+                            if attempt == 1:
+                                challenge3_1.succes()
+                            elif attempt == 2:
+                                challenge3_1.full_success()
+                            elif attempt == 3:
+                                challenge3_1.fail()
+                            elif attempt == 4:
+                                challenge3_1.full_fail()
+                        else:
+                            phrases.leaving()
+                    elif attempt == 3:
+                        challenge2_1.fail()
+                        roll = int(input())
+                        if roll == 1:
+                            attempt = random.randint(1,4)
+                            print_slowly("Your dice number is: ")
+                            print(attempt)
+                            if attempt == 1:
+                                challenge2_1.success()
+                                print("Proceeding to the last task...")
+                                challenge3_1.inroduction()
+                                roll = int(input())
+                                if roll == 1:
+                                    if attempt == 1:
+                                        challenge3_1.succes()
+                                    elif attempt == 2:
+                                        challenge3_1.full_success()
+                                    elif attempt == 3:
+                                        challenge3_1.fail()
+                                    elif attempt == 4:
+                                        challenge3_1.full_fail()
+                                else:
+                                    phrases.leaving()
+                            elif attempt == 2:
+                                challenge2_1.full_success()
+                                print("Proceeding to the last task...")
+                                challenge3_1.inroduction()
+                                roll = int(input())
+                                if roll == 1:
+                                    attempt = random.randint(1,4)
+                                    print_slowly("Your dice number is: ")
+                                    print(attempt)
+                                    if attempt == 1:
+                                        challenge3_1.succes()
+                                    elif attempt == 2:
+                                        challenge3_1.full_success()
+                                    elif attempt == 3:
+                                        challenge3_1.fail()
+                                    elif attempt == 4:
+                                        challenge3_1.full_fail()
+                                else:
+                                    phrases.leaving()
+                            elif attempt == 3 or attempt == 4:
+                                challenge2_1.full_fail()
+                    elif attempt == 4:
                         challenge2_1.full_fail()
-                elif dice_roll == 4:
-                    challenge2_1.full_fail()
+                    else:
+                        print("Error") 
                 else:
-                    print("Error") 
+                    print("You left the game")
             elif attempt == 3:
                 challenge1_1.fail()
             else:
-                print("You lef the game")
+                phrases.leaving()
                 quit()
         else:
-            print("You left the game")
+            phrases.leaving
+            quit()
     elif proceed == 2:
-        print("You left the game")
+        phrases.leaving()
         quit()
     else:
         print("Error")

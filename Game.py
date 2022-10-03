@@ -4,7 +4,12 @@ def print_slowly(text):
     for i in text:
         sys.stdout.write(i)
         sys.stdout.flush()
-        time.sleep(0.05)
+        time.sleep(0.07)
+def print_slowly2(text):
+    for i in text:
+        sys.stdout.write(i)
+        sys.stdout.flush()
+        time.sleep(0.8)
 class Challenge1_1:
     def introduction(self):
         print_slowly("The operation has started...\nThe first task is to hack electrical system and cut the power of the building\nRoll the dice to hack the system. Type [1] to roll ")
@@ -16,7 +21,7 @@ class Challenge1_1:
         print_slowly("Well done! You hacked electricity and improved your hacking abilities by 1 so that now terrorists don't have light.")
 class Challenge2_1:
     def introduction(self):
-        print_slowly("Get ready your rifle! Your next task is to enter a building and kill all terrorits there...\nRoll the dice to begin an anti-terror sweep. Type [1] to roll")
+        print_slowly("Get ready your rifle! Your next task is to enter a building and kill all terrorits there...\nRoll the dice to begin an anti-terror sweep. Type [1] to roll ")
     def success(self):
         print_slowly("Good job! All terrorists are dead.")
     def fail(self):
@@ -27,7 +32,7 @@ class Challenge2_1:
         print_slowly("Unfortunatelly, you were killed and mission is lost.")
 class Challenge3_1:
     def inroduction(self):
-        print_slowly("You are almost there! Your final task is to crack the door and defuse the bomb attached to the hostage\nRoll the dice to begin cracking and defusing. Type [1] to roll")
+        print_slowly("You are almost there! Your final task is to crack the door and defuse the bomb attached to the hostage\nRoll the dice to begin cracking and defusing. Type [1] to roll ")
     def succes(self):
         print_slowly("YOU WON! Terrorists are dead and hostage is saved. Mission is done successfully.")
     def fail(self):
@@ -38,7 +43,7 @@ class Challenge3_1:
         print_slowly("YOU LOST! You didn't even manage to crack the door, so the building blew up")
 class Challenge1_2:
     def introduction(self):
-        print_slowly("The operation has started...\nThe first task is to hack electrical system and cut the power of the building\nRoll the dice to hack the system. Type [1] to roll")
+        print_slowly("The operation has started...\nThe first task is to hack electrical system and cut the power of the building\nRoll the dice to hack the system. Type [1] to roll ")
     def success(self):
         print_slowly("Well done! You hacked electricity and now terrorists don't have light.")
     def fail(self):
@@ -49,7 +54,7 @@ class Challenge1_2:
         print_slowly("Well done! You hacked electricity and improved your hacking abilities by 1 so that now terrorists don't have light.")
 class Challenge2_2:
     def introduction(self):
-        print_slowly("Get ready your rifle! Your next task is to enter a building and kill all terrorits there...\nRoll the dice to begin an anti-terror sweep. Type [1] to roll")
+        print_slowly("Get ready your rifle! Your next task is to enter a building and kill all terrorits there...\nRoll the dice to begin an anti-terror sweep. Type [1] to roll ")
     def success(self):
         print_slowly("Good job! All terrorists are dead.")
     def full_success(self):
@@ -58,7 +63,7 @@ class Challenge2_2:
         print_slowly("Unfortunatelly, you were killed and mission is lost.")
 class Challenge3_2:
     def inroduction(self):
-        print_slowly("You are almost there! Your final task is to crack the door and defuse the bomb attached to the hostage\nRoll the dice to begin cracking and defusing. Type [1] to roll")
+        print_slowly("You are almost there! Your final task is to crack the door and defuse the bomb attached to the hostage\nRoll the dice to begin cracking and defusing. Type [1] to roll ")
     def succes(self):
         print_slowly("YOU WON! Terrorists are dead and hostage is saved. Mission is done successfully.")
     def fail(self):
@@ -67,3 +72,9 @@ class Challenge3_2:
         print_slowly("YOU WON! Terrorists are dead and hostage is saved. Mission is done successfully and you improved your defusing abilities by 1.")
     def full_fail(self):
         print_slowly("YOU LOST! You didn't even manage to crack the door, so the building blew up")
+class Phrases:
+    def leaving(self):
+        print("You left the game")
+    def number(self):
+        print_slowly("Your dice number is: ")
+        print_slowly2("... .. . ")
