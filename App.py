@@ -25,7 +25,7 @@ pick = int(input("Choose one role: "))
 if pick == 1:
     print("\nYour choice is", Role1.name)
     role1.description()
-    print_slowly("\n Are you ready to proceed to the operation?\n Type [1] if Yes or [2] if No")
+    print_slowly("\n Are you ready to proceed to the operation?\n Type [1] if Yes or [2] if No ")
     proceed = int(input())
     if proceed == 1 :
         challenge1_1.introduction()
@@ -56,6 +56,9 @@ if pick == 1:
                                 challenge3_1.succes()
                             elif attempt == 2:
                                 challenge3_1.full_success()
+                                Role1.defusing += 1
+                                time.sleep(2)
+                                role1.fdescription()
                             elif attempt == 3:
                                 challenge3_1.fail()
                             else:
@@ -64,6 +67,7 @@ if pick == 1:
                             phrases.leaving()
                     elif attempt == 2:
                         challenge2_1.full_success()
+                        Role1.shooting += 1
                         phrases.proceeding()
                         challenge3_1.inroduction()
                         roll = int(input())
@@ -73,8 +77,11 @@ if pick == 1:
                             print(attempt)
                             if attempt == 1:
                                 challenge3_1.succes()
+                                role1.fdescription()
                             elif attempt == 2:
                                 challenge3_1.full_success()
+                                Role1.defusing += 1
+                                role1.fdescription()
                             elif attempt == 3:
                                 challenge3_1.fail()
                             elif attempt == 4:
@@ -83,6 +90,7 @@ if pick == 1:
                             phrases.leaving()
                     elif attempt == 3:
                         challenge2_1.fail()
+                        Role1.shooting -= 1
                         roll = int(input())
                         if roll == 1:
                             attempt = random.randint(1,4)
@@ -99,14 +107,18 @@ if pick == 1:
                                     print(attempt)
                                     if attempt == 1:
                                         challenge3_1.succes()
+                                        role1.fdescription()
                                     elif attempt == 2:
                                         challenge3_1.full_success()
+                                        Role1.defusing += 1
+                                        role1.fdescription()
                                     elif attempt == 3:
                                         challenge3_1.fail()
                                     elif attempt == 4:
                                         challenge3_1.full_fail()
                             elif attempt == 2:
                                 challenge2_1.full_success()
+                                Role1.shooting += 1
                                 phrases.proceeding()
                                 challenge3_1.inroduction()
                                 roll = int(input())
@@ -116,8 +128,11 @@ if pick == 1:
                                     print(attempt)
                                     if attempt == 1:
                                         challenge3_1.succes()
+                                        role1.fdescription()
                                     elif attempt == 2:
                                         challenge3_1.full_success()
+                                        Role1.defusing += 1
+                                        role1.fdescription()
                                     elif attempt == 3:
                                         challenge3_1.fail()
                                     elif attempt == 4:
@@ -134,6 +149,7 @@ if pick == 1:
                     phrases.leaving()
             elif attempt == 2:
                 challenge1_1.full_success()
+                Role1.hacking += 1
                 phrases.next()
                 challenge2_1.introduction()
                 roll = int(input())
@@ -152,8 +168,11 @@ if pick == 1:
                             print(attempt)
                             if attempt == 1:
                                 challenge3_1.succes()
+                                role1.fdescription()
                             elif attempt == 2:
                                 challenge3_1.full_success()
+                                Role1.defusing += 1
+                                role1.fdescription()
                             elif attempt == 3:
                                 challenge3_1.fail()
                             elif attempt == 4:
@@ -162,6 +181,7 @@ if pick == 1:
                             phrases.leaving()
                     elif attempt == 2:
                         challenge2_1.full_success()
+                        Role1.shooting += 1
                         phrases.proceeding()
                         challenge3_1.inroduction()
                         roll = int(input())
@@ -171,8 +191,11 @@ if pick == 1:
                             print(attempt)
                             if attempt == 1:
                                 challenge3_1.succes()
+                                role1.fdescription()
                             elif attempt == 2:
                                 challenge3_1.full_success()
+                                Role1.defusing += 1
+                                role1.fdescription()
                             elif attempt == 3:
                                 challenge3_1.fail()
                             elif attempt == 4:
@@ -181,6 +204,7 @@ if pick == 1:
                             phrases.leaving()
                     elif attempt == 3:
                         challenge2_1.fail()
+                        Role1.shooting -= 1
                         roll = int(input())
                         if roll == 1:
                             attempt = random.randint(1,4)
@@ -194,8 +218,11 @@ if pick == 1:
                                 if roll == 1:
                                     if attempt == 1:
                                         challenge3_1.succes()
+                                        role1.fdescription()
                                     elif attempt == 2:
                                         challenge3_1.full_success()
+                                        Role1.defusing += 1
+                                        role1.fdescription()
                                     elif attempt == 3:
                                         challenge3_1.fail()
                                     elif attempt == 4:
@@ -204,6 +231,7 @@ if pick == 1:
                                     phrases.leaving()
                             elif attempt == 2:
                                 challenge2_1.full_success()
+                                Role1.shooting += 1
                                 phrases.proceeding()
                                 challenge3_1.inroduction()
                                 roll = int(input())
@@ -213,8 +241,11 @@ if pick == 1:
                                     print(attempt)
                                     if attempt == 1:
                                         challenge3_1.succes()
+                                        role1.fdescription()
                                     elif attempt == 2:
                                         challenge3_1.full_success()
+                                        Role1.defusing += 1
+                                        role1.fdescription()
                                     elif attempt == 3:
                                         challenge3_1.fail()
                                     elif attempt == 4:
@@ -245,7 +276,7 @@ if pick == 1:
 elif pick == 2:
     print("\nYour choice is", Role2.name)
     role2.description()
-    print_slowly("\n Are you ready to proceed to the operation?\n Type [1] if Yes or [2] if No")
+    print_slowly("\n Are you ready to proceed to the operation?\n Type [1] if Yes or [2] if No ")
     proceed = int(input())
     if proceed == 1 :
         challenge1_2.introduction()
@@ -407,6 +438,7 @@ elif pick == 2:
                     phrases.leaving()
             elif attempt == 3:
                 challenge1_2.fail()
+                Role2.hacking -= 1
                 roll = int(input())
                 if roll == 1:
                     attempt = random.randint(1,4)
@@ -432,8 +464,11 @@ elif pick == 2:
                                     print(attempt)
                                     if attempt == 1:
                                         challenge3_2.succes()
+                                        role2.fdescription()
                                     elif attempt == 2:
                                         challenge3_2.full_success()
+                                        Role2.defusing += 1
+                                        role2.fdescription()
                                     elif attempt == 3:
                                         challenge3_2.fail()
                                     else:
@@ -442,6 +477,7 @@ elif pick == 2:
                                     phrases.leaving()
                             elif attempt == 2:
                                 challenge2_2.full_success()
+                                Role2.shooting += 1
                                 phrases.proceeding()
                                 challenge3_2.inroduction()
                                 roll = int(input())
@@ -451,8 +487,11 @@ elif pick == 2:
                                     print(attempt)
                                     if attempt == 1:
                                         challenge3_2.succes()
+                                        role2.fdescription()
                                     elif attempt == 2:
                                         challenge3_2.full_success()
+                                        Role2.defusing += 1
+                                        role2.fdescription()
                                     elif attempt == 3:
                                         challenge3_2.fail()
                                     elif attempt == 4:
@@ -462,13 +501,14 @@ elif pick == 2:
                             elif attempt == 3:
                                 challenge2_2.fail()
                             elif attempt == 4:
-                                challenge2_2.full_fail()
+                                challenge2_2.fail()
                             else:
                                 print("Error")
                         else:
                             phrases.leaving()
                     elif attempt == 2:
                         challenge1_2.full_success()
+                        Role2.hacking += 1
                         phrases.next()
                         challenge2_1.introduction()
                         roll = int(input())
@@ -487,8 +527,11 @@ elif pick == 2:
                                     print(attempt)
                                     if attempt == 1:
                                         challenge3_1.succes()
+                                        role2.fdescription()
                                     elif attempt == 2:
                                         challenge3_1.full_success()
+                                        Role2.defusing += 1
+                                        role2.fdescription()
                                     elif attempt == 3:
                                         challenge3_1.fail()
                                     elif attempt == 4:
@@ -497,6 +540,7 @@ elif pick == 2:
                                     phrases.leaving()
                             elif attempt == 2:
                                 challenge2_1.full_success()
+                                Role2.shooting += 1
                                 phrases.proceeding()
                                 challenge3_1.inroduction()
                                 roll = int(input())
@@ -506,58 +550,19 @@ elif pick == 2:
                                     print(attempt)
                                     if attempt == 1:
                                         challenge3_1.succes()
+                                        role2.fdescription()
                                     elif attempt == 2:
                                         challenge3_1.full_success()
+                                        Role2.defusing += 1
+                                        role2.fdescription()
                                     elif attempt == 3:
                                         challenge3_1.fail()
                                     elif attempt == 4:
                                         challenge3_1.full_fail()
                                 else:
                                     phrases.leaving()
-                            elif attempt == 3:
-                                challenge2_1.fail()
-                                roll = int(input())
-                                if roll == 1:
-                                    attempt = random.randint(1,4)
-                                    phrases.number()
-                                    print(attempt)
-                                    if attempt == 1:
-                                        challenge2_1.success()
-                                        phrases.proceeding()
-                                        challenge3_1.inroduction()
-                                        roll = int(input())
-                                        if roll == 1:
-                                            if attempt == 1:
-                                                challenge3_1.succes()
-                                            elif attempt == 2:
-                                                challenge3_1.full_success()
-                                            elif attempt == 3:
-                                                challenge3_1.fail()
-                                            elif attempt == 4:
-                                                challenge3_1.full_fail()
-                                        else:
-                                            phrases.leaving()
-                                    elif attempt == 2:
-                                        challenge2_1.full_success()
-                                        phrases.proceeding()
-                                        challenge3_1.inroduction()
-                                        roll = int(input())
-                                        if roll == 1:
-                                            attempt = random.randint(1,4)
-                                            phrases.number()
-                                            print(attempt)
-                                            if attempt == 1:
-                                                challenge3_1.succes()
-                                            elif attempt == 2:
-                                                challenge3_1.full_success()
-                                            elif attempt == 3:
-                                                challenge3_1.fail()
-                                            elif attempt == 4:
-                                                challenge3_1.full_fail()
-                                        else:
-                                            phrases.leaving()
-                                    elif attempt == 3 or attempt == 4:
-                                        challenge2_1.full_fail()
+                            elif attempt == 3 or attempt == 4:
+                                challenge2_2.fail()
                     elif attempt == 3 or attempt == 4:
                         challenge2_2.full_fail()
                     else:
