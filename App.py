@@ -3,7 +3,7 @@ def print_slowly(text):
     for i in text:
         sys.stdout.write(i)
         sys.stdout.flush()
-        time.sleep(0.09)
+        time.sleep(0.07)
 def print_slowly2(text):
     for i in text:
         sys.stdout.write(i)
@@ -22,6 +22,10 @@ print_slowly2("WELCOME TO THE GAME")
 time.sleep(2)
 phrases.rules()
 time.sleep(2)
+phrases.plot()
+time.sleep(2)
+phrases.operators()
+time.sleep(0.5)
 pick = int(input("Choose one role: "))
 if pick == 1:
     print("\nYour choice is", Role1.name)
