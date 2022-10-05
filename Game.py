@@ -91,7 +91,7 @@ class Phrases:
         print_slowly("\nGameplay:\n")
         print_slowly("The main inputs for this game are [1] and [2]. Firstly, you will be asked to choose a role by typing 1 or 2. Then before each task you will be asked to type [1] to roll the dice and get your number.\n")
     def plot(self):
-        print_slowly("\nPlot:\n")
+        print_slowly("\nStory:\n")
         time.sleep(1)
         print_slowly("Washington, D.C.\n")
         time.sleep(0.5)
