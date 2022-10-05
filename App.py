@@ -18,14 +18,14 @@ challenge3_1 = Game.Challenge3_1()
 challenge1_2 = Game.Challenge1_2()
 challenge2_2 = Game.Challenge2_2()
 challenge3_2 = Game.Challenge3_2()
-print_slowly2("WELCOME TO THE GAME")
+'''print_slowly2("WELCOME TO THE GAME")
 time.sleep(2)
 phrases.rules()
 time.sleep(2)
 phrases.plot()
 time.sleep(2)
 phrases.operators()
-time.sleep(0.5)
+time.sleep(0.5)'''
 pick = int(input("Choose one role: "))
 if pick == 1:
     print("\nYour choice is", Role1.name)
@@ -265,7 +265,7 @@ if pick == 1:
                         print("Error") 
                 else:
                     phrases.leaving()
-            elif attempt == 3:
+            elif attempt == 3 or attempt == 4:
                 challenge1_1.fail()
             else:
                 phrases.leaving()
