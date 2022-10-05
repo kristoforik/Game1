@@ -8,7 +8,7 @@ def print_slowly2(text):
     for i in text:
         sys.stdout.write(i)
         sys.stdout.flush()
-        time.sleep(0.6)
+        time.sleep(0.5)
 role1 = Role1.Description()
 role2 = Role2.Description()
 phrases = Game.Phrases()
@@ -19,8 +19,9 @@ challenge1_2 = Game.Challenge1_2()
 challenge2_2 = Game.Challenge2_2()
 challenge3_2 = Game.Challenge3_2()
 print_slowly2("WELCOME TO THE GAME")
-time.sleep(5)
-print(" ")
+time.sleep(2)
+phrases.rules()
+time.sleep(2)
 pick = int(input("Choose one role: "))
 if pick == 1:
     print("\nYour choice is", Role1.name)
@@ -564,7 +565,7 @@ elif pick == 2:
                             elif attempt == 3 or attempt == 4:
                                 challenge2_2.fail()
                     elif attempt == 3 or attempt == 4:
-                        challenge2_2.full_fail()
+                        challenge2_2.fail()
                     else:
                         print("Error") 
                 else:
