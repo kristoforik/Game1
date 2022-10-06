@@ -12,7 +12,7 @@ def print_slowly2(text):
         time.sleep(0.8)
 class Challenge1_1:
     def introduction(self):
-        print_slowly("The operation has started...\nThe first task is to hack electrical system and cut the power of the building\nRoll the dice to hack the system. Type [1] to roll ")
+        print_slowly("The operation has started...\nThe first task is to hack the electrical system and cut the power of the building\nRoll the dice to hack the system. Type [1] to roll ")
     def success(self):
         print_slowly("Well done! You hacked electricity and now terrorists don't have light. ")
     def fail(self):
@@ -21,7 +21,7 @@ class Challenge1_1:
         print_slowly("Well done! You hacked electricity and improved your hacking abilities by 1 so that now terrorists don't have light. ")
 class Challenge2_1:
     def introduction(self):
-        print_slowly("Get ready your rifle! Your next task is to enter a building and kill all terrorits there...\nRoll the dice to begin an anti-terror sweep. Type [1] to roll ")
+        print_slowly("Get ready your rifle! Your next task is to enter a building and kill all terrorists there...\nRoll the dice to begin an anti-terror sweep. Type [1] to roll ")
     def success(self):
         print_slowly("Good job! All terrorists are dead. ")
     def fail(self):
