@@ -1,9 +1,12 @@
+'''This module is all about Role2 and provides all the information about it. The module contains some variables related to the second role
+and functions dedicated to display its description.'''
 import sys, time
 def print_slowly(text):
     for i in text:
         sys.stdout.write(i)
         sys.stdout.flush()
         time.sleep(0.05)
+'''The function print_slowly is dedicated to create the illusion of the text being printed real-time.'''
 name = 'Roger'
 age = 43
 shooting = 1

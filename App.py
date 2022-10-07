@@ -1,3 +1,4 @@
+'''This module is the main module for this game. All user interaction with the game happens here.'''
 import random, sys, time, Game, Role1, Role2
 def print_slowly(text):
     for i in text:
@@ -9,6 +10,7 @@ def print_slowly2(text):
         sys.stdout.write(i)
         sys.stdout.flush()
         time.sleep(0.5)
+'''Both functions print_slowly and print_slowly2 are dedicated to create the illusion of the text being printed real-time during this game.'''
 role1 = Role1.Description()
 role2 = Role2.Description()
 phrases = Game.Phrases()
@@ -18,14 +20,14 @@ challenge3_1 = Game.Challenge3_1()
 challenge1_2 = Game.Challenge1_2()
 challenge2_2 = Game.Challenge2_2()
 challenge3_2 = Game.Challenge3_2()
-'''print_slowly2("WELCOME TO THE GAME")
+print_slowly2("WELCOME TO THE GAME")
 time.sleep(2)
 phrases.rules()
 time.sleep(2)
 phrases.plot()
 time.sleep(2)
 phrases.operators()
-time.sleep(0.5)'''
+time.sleep(0.5)
 pick = int(input("Choose one role: "))
 if pick == 1:
     print("\nYour choice is", Role1.name)
@@ -312,6 +314,8 @@ elif pick == 2:
                                 challenge3_1.succes()
                             elif attempt == 2:
                                 challenge3_1.full_success()
+                                Role2.defusing +=  1
+                                role2.fdescription()
                             elif attempt == 3:
                                 challenge3_1.fail()
                             else:
@@ -320,6 +324,7 @@ elif pick == 2:
                             phrases.leaving()
                     elif attempt == 2:
                         challenge2_1.full_success()
+                        Role2.shooting += 1
                         phrases.proceeding()
                         challenge3_1.inroduction()
                         roll = int(input())
@@ -329,8 +334,11 @@ elif pick == 2:
                             print(attempt)
                             if attempt == 1:
                                 challenge3_1.succes()
+                                role2.fdescription()
                             elif attempt == 2:
                                 challenge3_1.full_success()
+                                Role2.defusing += 1
+                                role2.fdescription()
                             elif attempt == 3:
                                 challenge3_1.fail()
                             elif attempt == 4:
@@ -390,6 +398,7 @@ elif pick == 2:
                     phrases.leaving()
             elif attempt == 2:
                 challenge1_1.full_success()
+                Role2.hacking += 1
                 phrases.next()
                 challenge2_1.introduction()
                 roll = int(input())
@@ -408,8 +417,11 @@ elif pick == 2:
                             print(attempt)
                             if attempt == 1:
                                 challenge3_2.succes()
+                                role2.fdescription()
                             elif attempt == 2:
                                 challenge3_2.full_success()
+                                Role2.defusing += 1
+                                role2.fdescription()
                             elif attempt == 3:
                                 challenge3_2.fail()
                             elif attempt == 4:
@@ -418,6 +430,7 @@ elif pick == 2:
                             phrases.leaving()
                     elif attempt == 2:
                         challenge2_2.full_success()
+                        Role2.shooting += 1
                         phrases.proceeding()
                         challenge3_2.inroduction()
                         roll = int(input())
@@ -427,8 +440,11 @@ elif pick == 2:
                             print(attempt)
                             if attempt == 1:
                                 challenge3_2.succes()
+                                role2.fdescription()
                             elif attempt == 2:
                                 challenge3_2.full_success()
+                                Role2.defusing += 1
+                                role2.fdescription()
                             elif attempt == 3:
                                 challenge3_2.fail()
                             elif attempt == 4:
