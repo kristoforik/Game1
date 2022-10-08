@@ -17,6 +17,7 @@ class Challenge1_1:
     def success(self):
         print_slowly("Well done! You hacked electricity and now terrorists don't have light. ")
     def fail(self):
+        time.sleep(1)
         print_slowly("You lost! You did not manage to hack electricity and time is out. ") 
     def full_success(self):
         print_slowly("Well done! You hacked electricity and improved your hacking abilities by 1 so that now terrorists don't have light. ")
@@ -26,10 +27,12 @@ class Challenge2_1:
     def success(self):
         print_slowly("Good job! All terrorists are dead. ")
     def fail(self):
+        time.sleep(1)
         print_slowly("Unfortunatelly, while entering the building you got injured and your ability was reduced by 1. However, due to your experience, you have the second chance to continue the mission. Type [1] to roll again ")
     def full_success(self):
         print_slowly("Great job! You killed all terrorists and improved your shooting abilities by 1. ")
     def full_fail(self):
+        time.sleep(1)
         print_slowly("Unfortunatelly, you were killed and mission is lost.")
 class Challenge3_1:
     def inroduction(self):
@@ -37,10 +40,12 @@ class Challenge3_1:
     def succes(self):
         print_slowly("YOU WON! Terrorists are dead and hostage is saved. Mission is done successfully.")
     def fail(self):
+        time.sleep(1)
         print_slowly("YOU LOST! You didn't manage to defuse the bomb and exploded together with a hostage(")
     def full_success(self):
         print_slowly("YOU WON! Terrorists are dead and hostage is saved. Mission is done successfully and you improved your defusing abilities by 1.")
     def full_fail(self):
+        time.sleep(1)
         print_slowly("YOU LOST! You didn't even manage to crack the door, so the building blew up")
 class Challenge1_2:
     def introduction(self):
@@ -48,8 +53,10 @@ class Challenge1_2:
     def success(self):
         print_slowly("Well done! You hacked electricity and now terrorists don't have light. ")
     def fail(self):
+        time.sleep(1)
         print_slowly("Unfortunatelly, you didn't manage to hack the system this time and your hacking abilities were reduced by 1. However, you got a new device which might help you to shut power down, you have the second chance to continue the mission. Type [1] to roll ")
     def full_fail(self):
+        time.sleep(1)
         print_slowly("You lost! You did not manage to hack electricity and time is out. ") 
     def full_success(self):
         print_slowly("Well done! You hacked electricity and improved your hacking abilities by 1 so that now terrorists don't have light. ")
@@ -61,8 +68,10 @@ class Challenge2_2:
     def full_success(self):
         print_slowly("Great job! You killed all terrorists and improved your shooting abilities by 1. ")
     def fail(self):
+        time.sleep(1)
         print_slowly("Unfortunatelly, you were killed and mission is lost. ")
     def full_fail(self):
+        time.sleep(1)
         print_slowly("Unfortunatelly, you were killed and mission is lost. ")
 class Challenge3_2:
     def inroduction(self):
@@ -70,10 +79,12 @@ class Challenge3_2:
     def succes(self):
         print_slowly("YOU WON! Terrorists are dead and hostage is saved. Mission is done successfully.")
     def fail(self):
+        time.sleep(1)
         print_slowly("YOU LOST! You didn't manage to defuse the bomb and exploded together with a hostage(")
     def full_success(self):
         print_slowly("YOU WON! Terrorists are dead and hostage is saved. Mission is done successfully and you improved your defusing abilities by 1.")
     def full_fail(self):
+        time.sleep(1)
         print_slowly("YOU LOST! You didn't even manage to crack the door, so the building blew up")
 class Phrases:
     def leaving(self):
@@ -82,15 +93,15 @@ class Phrases:
         print_slowly("Your dice number is: ")
         print_slowly2("... .. . ")
     def proceeding(self):
-        print_slowly("Proceeding to the last task...\n")
+        print_slowly(" Proceeding to the last task...\n")
     def next(self):
         print_slowly("Now, moving to the next part of the operation\n")
     def rules(self):
         print_slowly("\nRules of the game:\n")
-        print_slowly("Initially, you are provided with the main plot and quest for this game. Then you can choose one role to begin the game. Each role has 3 attributes, which are the same for both roles. However, each role excels at one particular attribute and has higher value by 1, thereby having one more chance to pass the challenge.")
+        print_slowly("Initially, you are provided with the main plot and quest for this game. Then you can choose one role to begin the game. Each role has 3 attributes, which are the same for both roles. However, each role excels at one particular attribute and has a higher value by 1, thereby having one more chance to pass the challenge.")
         print_slowly("\nYou WIN this game only if you pass all 3 tasks")
         time.sleep(2)
-        print_slowly("\nAll possible outcomes of a dice is 1, 2, 3, 4... Victory is 1 & 2. Defeat is 3 & 4. By having 2, you increase your abilities by 1, by having 3 you decrease your abilities by 1.")
+        print_slowly("\nAll possible outcomes of a dice are 1, 2, 3, 4... Victory is 1 & 2. Defeat is 3 & 4. By having 2, you increase your abilities by 1, by having 3 you decrease your abilities by 1.")
         time.sleep(1)
         print_slowly("\nGameplay:\n")
         print_slowly("The main inputs for this game are [1] and [2]. Firstly, you will be asked to choose a role by typing 1 or 2. Then before each task you will be asked to type [1] to roll the dice and get your number.\n")
@@ -102,7 +113,7 @@ class Phrases:
         print_slowly("Terrorists have broken into an Amazon office and captured one hostage, the head of the office.")
         print_slowly("\nThe goal of the operation is to enter a building, sweep it from terrorists and save the hostage.")
     def operators(self):
-        print_slowly("\nYou can choose one between two operators")
+        print_slowly("\nYou can choose one between two FBI operators to start the operation")
         time.sleep(0.5)
         print_slowly("\n[1] John (rifleman) ")
         print_slowly("\n[2] Roger (hacker) \n")

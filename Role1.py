@@ -7,11 +7,11 @@ def print_slowly(text):
         sys.stdout.flush()
         time.sleep(0.05)
 '''The function print_slowly is dedicated to create the illusion of the text being printed real-time.'''
-name = 'John'
-age = 39
-shooting = 2
-hacking = 1
-defusing = 1
+name = 'John' #A variable for the name of the operator
+age = 39 #A variable for the age of the operator
+shooting = 2 #A variable for the shooting abilities of the operator
+hacking = 1 #A variable for the hacking abilities of the operator
+defusing = 1 #A variable for the defusing abilities of the operator
 class Description:
     def description(self):
         print_slowly("Operator's description:\n")

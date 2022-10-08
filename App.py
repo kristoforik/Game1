@@ -9,21 +9,21 @@ def print_slowly2(text):
     for i in text:
         sys.stdout.write(i)
         sys.stdout.flush()
-        time.sleep(0.5)
+        time.sleep(0.4)
 '''Both functions print_slowly and print_slowly2 are dedicated to create the illusion of the text being printed real-time during this game.'''
-role1 = Role1.Description()
-role2 = Role2.Description()
-phrases = Game.Phrases()
-challenge1_1 = Game.Challenge1_1()
-challenge2_1 = Game.Challenge2_1()
-challenge3_1 = Game.Challenge3_1()
-challenge1_2 = Game.Challenge1_2()
-challenge2_2 = Game.Challenge2_2()
-challenge3_2 = Game.Challenge3_2()
-print_slowly2("WELCOME TO THE GAME")
+role1 = Role1.Description() #This is a reference variable of a Decription class in Role1 module
+role2 = Role2.Description() #This is a reference variable of a Decription class in Role2 module
+phrases = Game.Phrases() #This is a reference variable of a Phrases class in Game module
+challenge1_1 = Game.Challenge1_1() #This is a reference variable of a Challenge1_1 class in Game module
+challenge2_1 = Game.Challenge2_1() #This is a reference variable of a Challenge2_1 class in Game module
+challenge3_1 = Game.Challenge3_1() #This is a reference variable of a Challenge3_1 class in Game module
+challenge1_2 = Game.Challenge1_2() #This is a reference variable of a Challenge1_2 class in Game module
+challenge2_2 = Game.Challenge2_2() #This is a reference variable of a Challenge2_2 class in Game module
+challenge3_2 = Game.Challenge3_2() #This is a reference variable of a Challenge3_2 class in Game module
+print_slowly2("WELCOME TO THE FBI SIMULATOR")
 time.sleep(2)
-phrases.rules()
-time.sleep(2)
+'''phrases.rules()
+time.sleep(2)'''
 phrases.plot()
 time.sleep(2)
 phrases.operators()
