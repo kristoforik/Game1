@@ -37,7 +37,7 @@ phrases.plot()
 time.sleep(2)
 phrases.operators()
 time.sleep(0.5)
-pick = int(input("Choose one role: "))
+pick = int(input("Choose one role: ")) #a variable for choosing a role
 if pick == 1:
     print("\nYour choice is", Role1.name)
     role1.description()
