@@ -9,7 +9,7 @@ def print_slowly2(text):
     for i in text:
         sys.stdout.write(i)
         sys.stdout.flush()
-        time.sleep(0.4)
+        time.sleep(0.3)
 '''Both functions print_slowly and print_slowly2 are dedicated to create the illusion of the text being printed real-time during this game.'''
 role1 = Role1.Description() #This is a reference variable of a Decription class in Role1 module
 role2 = Role2.Description() #This is a reference variable of a Decription class in Role2 module
@@ -20,10 +20,19 @@ challenge3_1 = Game.Challenge3_1() #This is a reference variable of a Challenge3
 challenge1_2 = Game.Challenge1_2() #This is a reference variable of a Challenge1_2 class in Game module
 challenge2_2 = Game.Challenge2_2() #This is a reference variable of a Challenge2_2 class in Game module
 challenge3_2 = Game.Challenge3_2() #This is a reference variable of a Challenge3_2 class in Game module
-print_slowly2("WELCOME TO THE FBI SIMULATOR")
-time.sleep(2)
+print_slowly2("\u001b[1mWELCOME TO THE")
+time.sleep(1)
+print('''
+\u001b[33m███████╗\u001b[34m██████╗░\u001b[37m██╗\u001b[34m  ░██████╗██╗███╗░░░███╗██╗░░░██╗██╗░░░░░░█████╗░████████╗░█████╗░██████╗░
+\u001b[33m██╔════╝\u001b[34m██╔══██╗\u001b[37m██║\u001b[34m  ██╔════╝██║████╗░████║██║░░░██║██║░░░░░██╔══██╗╚══██╔══╝██╔══██╗██╔══██╗
+\u001b[33m█████╗░░\u001b[34m██████╦╝\u001b[37m██║\u001b[34m  ╚█████╗░██║██╔████╔██║██║░░░██║██║░░░░░███████║░░░██║░░░██║░\u001b[37m\u001b[34m░██║██████╔╝
+\u001b[33m██╔══╝░░\u001b[34m██╔══██╗\u001b[37m██║\u001b[34m  ░╚═══██╗██║██║╚██╔╝██║██║░░░██║██║░░░░░██╔══██║░░░██║░░░\u001b[31m██║\u001b[30m░░\u001b[34m██║██╔══██╗
+\u001b[33m██║░░░░░\u001b[34m██████╦╝\u001b[37m██║\u001b[34m  ██████╔╝██║██║░╚═╝░██║╚██████╔╝███████╗██║░░██║░░░██║░\u001b[31m░░╚███\u001b[30m█\u001b[37m\u001b[34m█╔╝██║░░██║
+\u001b[33m╚═╝░░░░░\u001b[34m╚═════╝░\u001b[37m╚═╝\u001b[34m  ╚═════╝░╚═╝╚═╝░░░░░╚═╝░╚═════╝░╚══════╝╚═╝░░╚═╝░░░\u001b[31m╚═╝░░░░╚════╝░╚═╝░░╚═╝
+\u001b[0m''')
 '''phrases.rules()
 time.sleep(2)'''
+time.sleep(3)
 phrases.plot()
 time.sleep(2)
 phrases.operators()
